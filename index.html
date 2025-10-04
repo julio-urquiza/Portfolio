@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="titulo">
+                <h1 class="tituloH1">Portfolio</h1>
+            </div>
+            <div class="opciones">
+                <a href="#principal">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#formacion">Formacion</a>
+                <a href="#experiencia">Experiencia</a>
+                <a class="contactoBoton" href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section id="principal" class="contenedorPricipal">
+            <article class="nombre">
+                <h2>Hola, mi nombre es Julio Cesar Urquiza</h2>
+                <h3>Soy Desarrollador Full Stack</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, obcaecati excepturi explicabo
+                    temporibus quam distinctio illo provident saepe voluptatem aliquid velit non amet illum iste laborum
+                    sequi quod tenetur molestias!</p>
+            </article>
+            <article class="imagen">
+                <div class="marco">
+                    <img class="profile" src="profile.jpeg" alt="Imagen de Julio Cesar Urquiza">
+                </div>
+            </article>
+            <article class="redes">
+                <div class="github">
+                    <i class="ri-github-fill"></i>
+                    <a href="https://github.com/">Github</a>
+                </div>
+                <div class="linkedin">
+                    <i class="ri-linkedin-box-fill"></i>
+                    <a href="https://www.linkedin.com/in/julio-cesar-urquiza-b4194a1b6/">Linkedin</a>
+                </div>
+                <div class="mail">
+                    <i class="ri-mail-line"></i>
+                    <a>julio.cesar.urquiza4@gmail.com</a>
+                </div>
+                <div class="telefono">
+                    <i class="ri-phone-fill"></i>
+                    <a>011-3207-1129</a>
+                </div>
+            </article>
+        </section>
+        <section id="proyectos" class="contenedorProyectos">
+            <div class="marcoRight flex flex-col justify-center items-center">
+                <div class="contenedorTitulo">
+                    <h2 class="tituloH2">Proyectos</h2>
+                </div>
+                <div class="contenedorCard">
+                    <div class="carruselContenedor">
+                        <button onclick="mover(-1)"><i class="ri-arrow-left-s-fill"></i></button>
+                        <div id="carrusel" class="carrusel">
+                            <div class="carta">1</div>
+                            <div class="carta">2</div>
+                            <div class="carta">3</div>
+                            <div class="carta">4</div>
+                            <div class="carta">5</div>
+                            <div class="carta">6</div>
+                            <div class="carta">7</div>
+                            <div class="carta">8</div>
+                            <div class="carta">9</div>
+                        </div>
+                        <button onclick="mover(1)"><i class="ri-arrow-right-s-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="formacion" class="contenedorFormacion">
+            <div class="marcoLeft flex flex-col justify-center items-center gap-8">
+                <h2 class="tituloH2">Formacion</h2>
+                <div class="cartaFormacion"></div>
+                <div class="cartaFormacion"></div>
+                <div class="cartaFormacion"></div>
+            </div>
+        </section>
+        <section id="experiencia" class="contenedorExperiencia">
+            <div class="marcoRight flex flex-col justify-center items-center gap-8">
+                <h2 class="tituloH2">Experiencia</h2>
+                <div class="cartaExperiencia"></div>
+                <div class="cartaExperiencia"></div>
+                <div class="cartaExperiencia"></div>
+            </div>
+        </section>
+        <section id="contacto" class="contenedorContacto">
+            <div class="marcoLeft flex flex-col justify-center items-center gap-8">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="tituloH2">Contacto</h2>
+                    <form action="" class="formulario flex flex-col justify-center items-center gap-4">
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Email">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <article class="grid grid-cols-2 grid-row-2 gap-4">
+                    <div class="boton">
+                        <i class="ri-github-fill"></i>
+                        <a href="https://github.com/">Github</a>
+                    </div>
+                    <div class="boton">
+                        <i class="ri-linkedin-box-fill"></i>
+                        <a href="https://www.linkedin.com/in/julio-cesar-urquiza-b4194a1b6/">Linkedin</a>
+                    </div>
+                    <div class="boton">
+                        <i class="ri-mail-line"></i>
+                        <a>julio.cesar.urquiza4@gmail.com</a>
+                    </div>
+                    <div class="boton">
+                        <i class="ri-phone-fill"></i>
+                        <a>011-3207-1129</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer flex flex-col justify-center items-center gap-4">
+        <small>© <span id="year"></span> Julio Cesar Urquiza — Portfolio</small>
+    </footer>
+    <script>
+        const carrusel = document.getElementById("carrusel");
+
+        function mover(direccion) {
+            let scrollAmount = 440; // ancho de card + gap
+            carrusel.scrollBy({ left: direccion * scrollAmount, behavior: "smooth" });
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
+
+<!-- to do list 
+    -aplicar colores a los a link (github linkedin gmail tel) 
+    -poner contenido en el carrusel de proyectos
+    -hacer responsive
+    -mejorar el titulo principal o agrgar logo
+    -agrgar indicador de en que parte del html estoy en la opciones del navbar
+    -agregar efecto de tecleo que las letras vayan apareciendo solas en la pantalla de inicio
+ 
+ 
+ 
+ 
+ -->
